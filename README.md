@@ -1,48 +1,32 @@
-# CorporationX
+#CorporationX
 
-Репозиторий для всего проекта. Использует git submodule, чтобы включить все остальные сервисы
+Repository for the entire project. Uses git submodule to enable all other services
 
-# Как начать работу?
+# How to get started?
 
 `git clone --recurse-submodules https://github.com/CorporationX/CorporationX`
 
-# Как поднять БД и другие инструменты локально?
+# How to raise the database and other tools locally?
 
-Следуем инструкциям в README в разделе `infra`. Это отдельный репозиторий, который содержит в себе все инфраструктурные компоненты (БД, Redis, Docker Compose и пр.)
+Follow the instructions in the README in the `infra` section. This is a separate repository that contains all infrastructure components (DB, Redis, Docker Compose, etc.)
 
-# Как вести разработку?
+# How to develop?
 
-Каждая папка в этом репозитории - это отдельный подрепозиторий, который тоже есть на GitHub. Т.е. user_service - это обычный Git-репозиторий, который попросту включен в большой репозиторий CorporationX в качестве подрепозитория. 
+Each folder in this repository is a separate subrepository, which is also on GitHub. Those. user_service is a regular Git repository that is simply included in the larger CorporationX repository as a subrepository
 
-CorporationX репозиторий существует лишь для удобства: можно сразу склонировать все необходимые сервисы всего одной командой `git clone`, которая указана выше.
+The CorporationX repository exists only for convenience: you can immediately clone all the necessary services with just one command `git clone`, which is indicated above.
 
-Каждый подрепозиторий представляет собой отдельный сервис (Java-приложение) в экосистеме CorporationX. Например, user_service - это приложение, которое содержит в себе логику работы с пользователями, project_service - логику работы с проектами и т.д. 
-Соответственно в зависимости от конкретной задачи вы будете работать либо в том, либо в другом сервисе. По сути просто писать там код, как в обычном проекте в IDEA.
+Each subrepository represents a separate service (Java application) in the CorporationX ecosystem. For example, user_service is an application that contains the logic for working with users, project_service is the logic for working with projects, etc.
+Accordingly, depending on the specific task, you will work in either one or another service. Basically, just write code there, as in a regular project in IDEA.
 
-Поэтому:
-1. Выкачиваем весь проект CorporationX, используя команду клонирования выше
-2. Из конкретной задачи в Jira определяем, в каком сервисе нужно вести разработку.
-3. Открываем в IDEA папку с этим сервисом
-4. Работаемс!
+That's why:
+1. Download the entire CorporationX project using the clone command above
+2. From a specific task in Jira, we determine which service needs to be developed in.
+3. Open the folder with this service in IDEA
+4. Let's work!
+5. 
+# Tests
 
-# Как создавать PR?
+Each PR in this repository must contain unit tests for all your logic. PRs without unit tests will be sent straight back to work without partial verification. When the team adds CI pipelines to GitHub, PRs with failed tests will also be immediately sent back to work without partial verification.
 
-Каждая команда будет иметь свою собственную master ветку в общем репозитории. Например, команда unicorn имеет ветку `master-unicorn`, которая содержит весь стабильный код этой команды в определенном сервисе, и именно туда участники должны создавать PR-ы.
-
-Поэтому:
-
-1. Получаем задачу в Jira
-2. Определяем, в каком сервисе будем вести разработку
-3. Открываем этот сервис в IDEA
-4. Переключаемся на `master`-ветку СВОЕЙ команды. ЭТО ОЧЕНЬ ВАЖНО. Если вы только начинаете разработку новой задачи, то убедитесь, что переключились на ветку `master-unicorn` или `master-kraken` в зависимости от вашей команды, перед тем, как создать еще одну ветку.
-5. Из данной ветки создаем ветку для вашей конкретной задачи по шаблону: `feature-{номер_задачи}` или `bugfix-{номер_задачи}` в зависимости от того, делаете ли вы новую фичу или чините некоторый баг.
-6. Именно в этой ветке ведем всю разработку
-7. Когда разработка завершена создаем PR из этой ветки в master-ветку вашей команды, из которой изначально и создавали рабочую ветку. Убедитесь, что всегда создаете PR в правильную ветку именно для вашей команды.
-8. Получам аппрув от техлида.
-9. Мержируемся!
-
-# Тесты
-
-Каждый PR в этом репозитории обязан содержать unit-тесты на всю вашу логику. PR-ы без unit-тестов будут отправлятся сразу обратно в работу без частичной проверки. Когда команда добавит CI пайплайны на GitHub, то PR-ы с упавшими тестами, будут также сразу отправляться обратно в работу без частичной проверки. 
-
-Ваш PR должен быть полностью зеленым и покрыт тестами, чтобы получить ревью. Это обязательное требование.
+Your PR must be completely green and covered in tests to get a review. This is a mandatory requirement.
