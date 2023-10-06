@@ -26,7 +26,7 @@ That's why:
 2. From a specific task in Jira, we determine which service needs to be developed in.
 3. Open the folder with this service in IDEA
 4. Let's work!
-5. 
+   
 # Tests
 
 Each PR in this repository must contain unit tests for all your logic. PRs without unit tests will be sent straight back to work without partial verification. When the team adds CI pipelines to GitHub, PRs with failed tests will also be immediately sent back to work without partial verification.
