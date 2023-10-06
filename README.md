@@ -1,6 +1,7 @@
 #CorporationX
 
 Repository for the entire project. Uses git submodule to enable all other services
+My team and I worked in the 'werefoulf-master' branch. If you are interested in this project, you can open any folder and check out this branch.
 
 # How to get started?
 
