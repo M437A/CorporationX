@@ -4,31 +4,68 @@ Repository for the entire project. Uses git submodule to enable all other servic
 
 My team and I worked in the 'werefoulf-master' branch. If you are interested in this project, you can open any folder and check out this branch.
 
-# How to get started?
+## List with my tasks
 
-`git clone --recurse-submodules https://github.com/CorporationX/CorporationX`
+### 1. Scheduled Post Publication
 
-# How to raise the database and other tools locally?
+- **Description:** Develop a system for scheduled post publication on the website.
+- **Tasks:**
+  - Create a data model for scheduled posts.
+  - Implement a service for scheduling and publishing posts.
+  - Integrate the service with a task scheduler.
+- **Priority:** High
 
-Follow the instructions in the README in the `infra` section. This is a separate repository that contains all infrastructure components (DB, Redis, Docker Compose, etc.)
+### 2. Improved Notification System
 
-# How to develop?
+- **Description:** Enhance the efficiency of the notification system by adhering to SOLID principles and utilizing Kafka as a message broker.
+- **Tasks:**
+  - Refactor the existing notification system following SOLID principles.
+  - Integrate Apache Kafka for more efficient notification handling and distribution.
+- **Priority:** High
 
-Each folder in this repository is a separate subrepository, which is also on GitHub. Those. user_service is a regular Git repository that is simply included in the larger CorporationX repository as a subrepository
+### 3. Integration of Third-Party Avatar API
 
-The CorporationX repository exists only for convenience: you can immediately clone all the necessary services with just one command `git clone`, which is indicated above.
+- **Description:** Integrate a third-party API to generate avatars based on user profile data.
+- **Tasks:**
+  - Set up integration with the avatar generation API.
+  - Implement backup to Amazon S3 for generated avatars.
+- **Priority:** Medium
 
-Each subrepository represents a separate service (Java application) in the CorporationX ecosystem. For example, user_service is an application that contains the logic for working with users, project_service is the logic for working with projects, etc.
-Accordingly, depending on the specific task, you will work in either one or another service. Basically, just write code there, as in a regular project in IDEA.
+### 4. Subtask Division and Privacy Controls
 
-That's why:
-1. Download the entire CorporationX project using the clone command above
-2. From a specific task in Jira, we determine which service needs to be developed in.
-3. Open the folder with this service in IDEA
-4. Let's work!
-   
-# Tests
+- **Description:** Develop the functionality to split collaborative tasks into subtasks, introduce privacy controls, and enable automatic updates using a binary tree structure.
+- **Tasks:**
+  - Create a data structure to represent the binary tree of tasks.
+  - Design an interface for dividing collaborative tasks into subtasks.
+  - Implement privacy controls for tasks.
+- **Priority:** High
 
-Each PR in this repository must contain unit tests for all your logic. PRs without unit tests will be sent straight back to work without partial verification. When the team adds CI pipelines to GitHub, PRs with failed tests will also be immediately sent back to work without partial verification.
+### 5. User Registration via CSV File
 
-Your PR must be completely green and covered in tests to get a review. This is a mandatory requirement.
+- **Description:** Add the feature to register users by uploading a CSV file.
+- **Tasks:**
+  - Develop a CSV file loader and processor.
+  - Create a mechanism for user validation and import from CSV.
+- **Priority:** Medium
+
+### 6. Bug Fixes and Performance Enhancement
+
+- **Description:** Perform debugging, bug fixes, and application performance optimization.
+- **Tasks:**
+  - Identify and rectify existing bugs.
+  - Profile and optimize code for better performance.
+- **Priority:** High
+
+### 7. Testing and Quality Assurance
+
+- **Description:** Conduct thorough testing of the application to ensure product quality.
+- **Tasks:**
+  - Write automated tests for critical functions.
+  - Perform manual testing and quality control.
+- **Priority:** High
+
+
+---
+
+Please note that these are the main tasks, and there may be additional tasks or subtasks associated with the project.
+
